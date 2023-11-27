@@ -3,6 +3,7 @@ import { useState, Suspense } from 'react'
 import Loader from '../components/Loader'
 
 import Keyboard from '../models/Keyboard';
+import BackgroundText from '../components/BackgroundText';
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
@@ -26,8 +27,7 @@ const Home = () => {
 
   return (
     <section className="w-full h-screen bg-neutral-900 relative">
-        <h1 className="leading-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-slate-50 font-bold text-[200px]">MECHANICAL <br/> INDUSTRY</h1>
-        
+        <BackgroundText/>
         <Canvas 
             className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
             camera={{ near: 0.1, far: 1000}}
