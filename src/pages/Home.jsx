@@ -3,7 +3,8 @@ import { useState, Suspense } from 'react'
 import Loader from '../components/Loader'
 
 import Keyboard from '../models/Keyboard';
-import BackgroundText from '../components/BackgroundText';
+import Welcome from '../components/Welcome';
+import StartButton from '../components/Buttons/StartButton';
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
@@ -27,7 +28,7 @@ const Home = () => {
 
   return (
     <section className="w-full h-screen bg-neutral-900 relative">
-        <BackgroundText />
+        <Welcome />
         <Canvas 
             className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
             camera={{ near: 0.1, far: 1000}}
@@ -46,7 +47,7 @@ const Home = () => {
                 />
             </Suspense>
         </Canvas>
-        <button className="absolute bottom-20 left-1/2 transform -translate-x-1/2 -translate-y-1/5 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br dark:focus:ring-pink-800 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2">Become pro</button>
+        <StartButton />
     </section>
   )
 }
