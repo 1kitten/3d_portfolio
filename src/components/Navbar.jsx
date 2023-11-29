@@ -7,10 +7,10 @@ const Navbar = () => {
         <p className="text-white">MI</p>
       </NavLink>
       <nav className="flex text-lg gap-7 font-medium">
-        <NavLink to="/about" className={({ isActive }) => isActive ? "text-white hover:underline" : "text-purple-300 hover:underline"}>
+        <NavLink to="/about" className={({ isActive }) => isActive ? "text-white hover:underline" : "text-pink-500 hover:underline"}>
           About
         </NavLink>
-        <NavLink to="/contacts" className={({ isActive }) => isActive ? "text-white hover:underline" : "text-purple-300 hover:underline"}>
+        <NavLink to="/contacts" className={({ isActive }) => isActive ? "text-white hover:underline" : "text-pink-500 hover:underline"}>
           Contacts
         </NavLink>
       </nav>
